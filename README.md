@@ -14,4 +14,4 @@ Query2 - Helper class for query 2
 Publication - Parent class for all types of Publications
 PublicationFactory - Decided which sub-class of Publication to instantiate
 Proceeding, PHDThesis, MasterThesis, Inproceeding, Incollection, Book, Article - Sub classes of Publication - help differentiate different kinds of Publications
-Author - Holds author info, including all other names used and no. of publications(also yearwise)
+Author - Holds author info, including all other names used and no. of publications (also yearwise)
