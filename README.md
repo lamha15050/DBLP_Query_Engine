@@ -6,6 +6,7 @@ Project requirements described in file "Project Description"
 Description of each class
 
 DBLPQueryEngine: contains the main function, has the driver code
+
 DBLP_GUI: Handles the complete GUI aspect of the project
 
 Parse_AuthorPublications, Parse_InitialiseAuthors, Parse_InitialiseForPrediction: parse the DBLP file for initialisation of the system
