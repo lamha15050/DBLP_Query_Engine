@@ -83,13 +83,20 @@ public class Parser_Query1_Author extends DefaultHandler{
 			a = authorMap.get(s);	//a cannot be null now
 			String[] nameParts = s.split("\\W");
 			int m = nameParts.length;
+			boolean[] found = new boolean[n];
+			for(int i= 0;i<n;i++)
+			{
+				found[i] = false;
+			}
 			for(int i = 0; i<m; i++)
 			{
 				for(int j= 0;j<n;j++)
 				{
-					if(enteredNameParts[j]!=null && enteredNameParts[j].equalsIgnoreCase(nameParts[i]))
+					if(found[j]==false && enteredNameParts[j]!=null && enteredNameParts[j].equalsIgnoreCase(nameParts[i]))
 					{
 						tempRelevance++;
+						found[j] = true;
+						break;
 					}
 				}
 			}

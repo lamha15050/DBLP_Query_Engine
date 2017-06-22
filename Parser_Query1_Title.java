@@ -84,14 +84,20 @@ public class Parser_Query1_Title extends DefaultHandler{
 			int n = tags.length;
 			String[] publicationTags = p.getTitle().split("\\W");
 			int m = publicationTags.length;
+			boolean[] found = new boolean[n];
+			for(int i=0;i<n;i++)
+			{
+				found[i]=false;
+			}
 			for(int i=0;i<n;i++)
 			{
 				for(int j=0;j<m;j++)
 				{
-					//TODO break if found a match or not? Like "xyz" occurring twice increases relevance twice or just once?
-					if(tags[i]!=null && tags[i].equalsIgnoreCase(publicationTags[j]))
+					if(found[i]==false && tags[i]!=null && tags[i].equalsIgnoreCase(publicationTags[j]))
 					{
 						p.increaseRelevance();
+						found[i]=true;
+						break;
 					}
 				}
 			}
